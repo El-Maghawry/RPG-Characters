@@ -1,4 +1,4 @@
-# RPG-Characters
+# RPG Adventure 🏰🐉
 
 RPG-Characters concept for a hypothetical RPG game.
 
@@ -22,7 +22,7 @@ Warrior (Axe, Hammer, Sword | Mail, Plate) = Strength 5, Dexterity 2, Intelligen
 
 Mage (Staff, Wand | Cloth)= Strength 1, Dexterity 1, Intelligence 8 | +1 level -> Str 1 Dex 1 Int 8 -> 1% damage
 
-### Game Functions 
+### Game Functionality 🕹👾
 The game and every character needs to be able to have:
 - level up (assign and update the new attributes);
 - wield the right equipment at the right time (InvalidWeaponException/InvalidArmorException);
