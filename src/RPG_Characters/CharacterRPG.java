@@ -1,5 +1,8 @@
 package RPG_Characters;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 public class CharacterRPG {
       private String username;
       private String type;
@@ -21,13 +24,9 @@ public class CharacterRPG {
         //      something like a bag of stuff for carrying items?
 
 
-    public CharacterRPG(String username, String type) {
+    public CharacterRPG(String username) {
         this.username = username;
-        this.type= type;
         this.level = 1;
-        this.strength = 1;
-        this.dexterity = 1;
-        this.intelligence = 1;
         this.experience = 0;
         this.lifePointsMax = 150;
         this.lifePointsCurrent = lifePointsMax;
@@ -39,7 +38,53 @@ public class CharacterRPG {
         this.CharacterDPS = 0;
         this.baseAttributes = 0;
         this.TotalAttributes = 0;
+        String input;
+
+        System.out.print("\nChoose Type:\n Warrior ⚔️ | Ranger 🏹 | Rogue 🗡 | Mage 🪄 \n-> ");
+        Scanner sc = new Scanner(System.in);
+        input = sc.nextLine().toLowerCase(Locale.ROOT);
+        
+        while((!(input.equals("warrior") || input.equals("ranger") || input.equals("rogue") || input.equals("mage")))){
+            System.out.print("\nChoose Type:\n Warrior ⚔️ | Ranger 🏹 | Rogue 🗡 | Mage 🪄 \n-> ");
+            Scanner sc2 = new Scanner(System.in);
+            input = sc2.nextLine().toLowerCase(Locale.ROOT);
+        }
+        if (input.equals("warrior") ) {
+            this.type = input;
+            System.out.println("Welcome " + this.username + " You have selected the ⚔️ Warrior type!");
+            this.strength = 5;
+            this.dexterity = 2;
+            this.intelligence = 1;
+
+        } else if (input.equals("ranger")) {
+            this.type = input;
+            System.out.println("Welcome " + this.username + " You have selected the 🏹 Ranger type!");
+            this.strength = 1;
+            this.dexterity = 7;
+            this.intelligence = 1;
+
+        } else if (input.equals("rogue")) {
+            this.type = input;
+            System.out.println("Welcome " + this.username + " You have selected the 🗡 Rogue type!");
+            this.strength = 2;
+            this.dexterity = 6;
+            this.intelligence = 1;
+
+
+        } else{
+            this.type = input;
+            System.out.println("Welcome " + this.username + " You have selected the 🪄 Mage type!");
+            this.strength = 1;
+            this.dexterity = 1;
+            this.intelligence = 8;
+
+        }
     }
+
+
+
+
+
 
 
 

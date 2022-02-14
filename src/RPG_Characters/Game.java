@@ -8,10 +8,8 @@ package RPG_Characters;
 //• Naming is important.
 //      o MethodYouAreTesting_ConditionsItsBeingTestedUnder_ExpectedBehaviour().
 
-import java.time.LocalDate;
-import java.util.HashMap;
+import java.io.IOException;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Scanner;
 
 //tests should cover the following behavior:
@@ -25,19 +23,30 @@ import java.util.Scanner;
 //        o Use the base attributes, plus one instance of the level up as the expected.
 //        o E.g. Warrior -> levelup() -> ( Strength = 8, Dexterity = 4, Intelligence = 2) expected. o This results in four test methods.
 public class Game {
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
     public static void main(String[] args) {
-        System.out.println("Name your adventurer:");
+        System.out.println("""
+                ° . *　　　°　.　°☆ 　. * ● ¸ . ● . ★ ° . *　　　°　.　°☆ ○ ° ★　 .　 * 　.★     ° :.☆ ° • ○
+                ★ 　° :. ★　 * • ○ ° ★　 . * ● ¸ .{ Welcome to RPG Adventure }　° :●. 　 *  ° 　. ● . ★ ° .\s
+                * 　.　 　°☆ 　. * ● ¸ . 　　　★ 　　　　　. 　  ° 　. ● . ★ ° . *　　　°　.　 :. 　 * • ○ ° ★　
+                """);
+        System.out.print("Name your adventurer: ");
         Scanner sc = new Scanner(System.in);
         String x = sc.nextLine();
 
-        System.out.println("Choose type: Warrior, Ranger, Rogue, Mage:");
-        Scanner sc2 = new Scanner(System.in);
-        String y = sc2.nextLine().toLowerCase(Locale.ROOT);
+//        System.out.print("\nChoose Type:\n| Warrior ⚔️ | Ranger 🏹 | Rogue\uD83D\uDDE1 | Mage 🪄 |\n-> ");
+//        Scanner sc2 = new Scanner(System.in);
+//        String y = sc2.nextLine().toLowerCase(Locale.ROOT);
 
-        CharacterRPG player = new CharacterRPG(x, y);
-        System.out.println(player);
+        CharacterRPG player = new CharacterRPG(x);
+        System.out.println("\n" + player);
 
-        }
-        }
+        clearScreen();
+    }
+}
 
 
