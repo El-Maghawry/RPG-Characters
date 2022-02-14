@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class CharacterRPG {
       private String username;
       private String type;
+      private String input = " ";
       private Integer level;
       private Integer strength;
       private Integer dexterity;
@@ -21,6 +22,7 @@ public class CharacterRPG {
       private Integer CharacterDPS;
       private Integer baseAttributes;
       private Integer TotalAttributes;
+
         //      something like a bag of stuff for carrying items?
 
 
@@ -38,11 +40,6 @@ public class CharacterRPG {
         this.CharacterDPS = 0;
         this.baseAttributes = 0;
         this.TotalAttributes = 0;
-        String input;
-
-        System.out.print("\nChoose Type:\n Warrior ⚔️ | Ranger 🏹 | Rogue 🗡 | Mage 🪄 \n-> ");
-        Scanner sc = new Scanner(System.in);
-        input = sc.nextLine().toLowerCase(Locale.ROOT);
         
         while((!(input.equals("warrior") || input.equals("ranger") || input.equals("rogue") || input.equals("mage")))){
             System.out.print("\nChoose Type:\n Warrior ⚔️ | Ranger 🏹 | Rogue 🗡 | Mage 🪄 \n-> ");
