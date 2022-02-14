@@ -41,7 +41,7 @@ public class CharacterRPG {
         this.TotalAttributes = 0;
 
         while ((!(input.equals("warrior") || input.equals("ranger") || input.equals("rogue") || input.equals("mage")))) {
-            System.out.print("\nChoose Type:\n Warrior ⚔️ | Ranger 🏹 | Rogue 🗡 | Mage 🪄 \n-> ");
+            System.out.print("\nChoose Type:  Warrior ⚔️ | Ranger 🏹 | Rogue 🗡 | Mage 🪄 \n-> ");
             Scanner sc2 = new Scanner(System.in);
             input = sc2.nextLine().toLowerCase(Locale.ROOT);
         }
@@ -74,7 +74,41 @@ public class CharacterRPG {
             this.dexterity = 1;
             this.intelligence = 8;
 
-        }
+        }}
+
+        public void levelUp(CharacterRPG namePlayer) {
+            if (namePlayer.getType().equals("warrior")) {
+                namePlayer.setLevel(namePlayer.getLevel() + 1);
+                namePlayer.setStrength(namePlayer.getStrength() + 3);
+                namePlayer.setDexterity(namePlayer.getDexterity() + 2);
+                namePlayer.setIntelligence(namePlayer.getIntelligence() + 1);
+                System.out.println("\n" + namePlayer);
+                System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
+
+            } else if (namePlayer.getType().equals("ranger")) {
+                namePlayer.setLevel(namePlayer.getLevel() + 1);
+                namePlayer.setStrength(namePlayer.getStrength() + 1);
+                namePlayer.setDexterity(namePlayer.getDexterity() + 5);
+                namePlayer.setIntelligence(namePlayer.getIntelligence() + 1);
+                System.out.println("\n" + namePlayer);
+                System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
+
+            } else if (namePlayer.getType().equals("mage") ) {
+                namePlayer.setLevel(namePlayer.getLevel() + 1);
+                namePlayer.setStrength(namePlayer.getStrength() + 1);
+                namePlayer.setDexterity(namePlayer.getDexterity() + 1);
+                namePlayer.setIntelligence(namePlayer.getIntelligence() + 5);
+                System.out.println("\n" + namePlayer);
+                System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
+
+            } else{
+                namePlayer.setLevel(namePlayer.getLevel() + 1);
+                namePlayer.setStrength(namePlayer.getStrength() + 1);
+                namePlayer.setDexterity(namePlayer.getDexterity() + 4);
+                namePlayer.setIntelligence(namePlayer.getIntelligence() + 1);
+                System.out.println("\n" + namePlayer);
+                System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
+            }
     }
 
     public String getUsername() {
@@ -235,41 +269,7 @@ public class CharacterRPG {
                 ", TotalAttributes=" + TotalAttributes +
                 '}';
     }
-
-    public void levelUp(CharacterRPG namePlayer) {
-        if (namePlayer.getType().equals("warrior")) {
-            namePlayer.setLevel(namePlayer.getLevel() + 1);
-            namePlayer.setStrength(namePlayer.getStrength() + 3);
-            namePlayer.setDexterity(namePlayer.getDexterity() + 2);
-            namePlayer.setIntelligence(namePlayer.getIntelligence() + 1);
-            System.out.println("\n" + namePlayer);
-            System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
-
-        } else if (namePlayer.getType().equals("ranger")) {
-            namePlayer.setLevel(namePlayer.getLevel() + 1);
-            namePlayer.setStrength(namePlayer.getStrength() + 1);
-            namePlayer.setDexterity(namePlayer.getDexterity() + 5);
-            namePlayer.setIntelligence(namePlayer.getIntelligence() + 1);
-            System.out.println("\n" + namePlayer);
-            System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
-
-        } else if (namePlayer.getType().equals("mage") ) {
-            namePlayer.setLevel(namePlayer.getLevel() + 1);
-            namePlayer.setStrength(namePlayer.getStrength() + 1);
-            namePlayer.setDexterity(namePlayer.getDexterity() + 1);
-            namePlayer.setIntelligence(namePlayer.getIntelligence() + 5);
-            System.out.println("\n" + namePlayer);
-            System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
-
-        } else{
-            namePlayer.setLevel(namePlayer.getLevel() + 1);
-            namePlayer.setStrength(namePlayer.getStrength() + 1);
-            namePlayer.setDexterity(namePlayer.getDexterity() + 4);
-            namePlayer.setIntelligence(namePlayer.getIntelligence() + 1);
-            System.out.println("\n" + namePlayer);
-            System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
         }
-        }
-    }
+
 
 
