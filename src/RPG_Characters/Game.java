@@ -5,13 +5,28 @@ import java.util.Scanner;
 public class Game {
     private static boolean run = true;
 
+    public static void goBackToMainMenu(){
+        System.out.print("\nPress ENTER to go back to the Main Menu");
+        Scanner y = new Scanner(System.in);
+        y.nextLine();
+
+    }
+
     public static void main(String[] args) {
         System.out.println("""
-                \n° . *　　　°　.　°☆ 　. * ● ¸ . ● . ★ ° . *　　　°　.　°☆ ○ ° ★　 .　 * 　.★     ° :.☆ ° • ○ * ● ¸ . ● . ★ ° . *　　　°　.　°☆ ○ ° ★　 .　 * 　.★     ° :.☆ ° • ○★　 .　 * 　.★     ° :.☆ ° • ○ * ● ¸ . ● . ★ ° . *　　　°　.　°☆ ○ ° ★　 .　 * 　.★     ° :.☆ ° • ○
-                ★ 　° :. ★　 * • ○ ° ★　 . * ● ¸ .{ Welcome to RPG Adventure }　° :●. 　 *  ° 　. ● . ★ ° .° :●. 　 *  ° 　. ● . ★ ° .° :●. 　 *  ° 　. ● . ★ ° .° :●. 　 *  °　° :●. 　 *  ° 　. ● . ★ ° .° :●. 　 *  ° 　. ● . ★ ° .° :●. 　 *  ° 　. ● . ★ ° .° :●. 　 *  ° 　 　\s
-                * 　.　 　°☆ 　. * ● ¸ .★  .  ° 　. ● . ★ ° . *　　　°　.　 :. 　 * • ○ ° ★　* 　.　 　°☆ 　. * ● ¸ . ★　.° 　. ● . ★ ° . *°　.　 :. 　 * • ○ ° ★ :. 　 * • ○ ° ★° :.☆ ° • ○ * ● ¸ . ● . ★ ° . *　　　°　.　°☆ ○ ° ★　 .　 * 　.★     ° :.☆ ° • ○★　 .　 * 　.★     ° :.☆
+                                                                                                                  
+                                                                                                                  \\`-\\`-._
+                                                                                                                   \\` )`. `-.__      ,
+                 ---.____    ,/k.                                                                 '' , . _       _,-._;'_,-`__,-'    ,/
+                  ___,---'  /  ih,__,-----.___ __,-----.       { Welcome to RPG Adventure }      : `. ` , _' :- '--'._ ' `------._,-;'
+                         ,-' ,  `:7b----.__---`  .----.-                                          `- ,`- '            `--..__,,---'hh  
+                     _.-/   '  /b.`.4p,        ,/k,                             
+                  --"  ,    ,-' ^6x, `."^=._  /  ih\\                                                                
+                ° . *　　　°　.　°☆ 　. * ● ¸ . ● . ★ ° . *　　　°　.　°☆ °　.　°☆ ○ ° ★　 .　 * 　.★     ° :.☆ ° • ○★　 .　 * 　.★     ° :.☆ ° • ○ * • ○　.　°☆ ○ ° ★　 .　 * 　.★  
+                * ° :●. 　 *  ° 　. ● . ★ ° .° ★ ° .° :●. 　 *  °　° :●. 　 *  ° 　. ● . ★ ° .° :●. 　 *  ° 　. ● . ★ ° .° :●. 　 *  ° 　. ● . ★ ° .° :●. 　 *  ° 　.　°☆ ○ ° ★　 .　 * 　.★  
+                * 　.　 　°☆ 　. * ● ¸ .★  .  ° 　. ● . ★ ° . *　　　°　.　 :.* • ○     ● . ★ ° . *°　.　 :. 　 * • ○ ° ★ :. 　 * • ○ ° ★° :.☆ ° • ○ * ● ¸ . ● . ★ ° . *　　　°　.　°☆ ○ ° ★　 .　
                 """);
-        System.out.print("Name your adventurer: ");
+        System.out.print("🌋 Name your adventurer: ");
         Scanner sc = new Scanner(System.in);
         String x = sc.nextLine();
 
@@ -24,25 +39,30 @@ public class Game {
             int option = o.nextInt();
             switch (option) {
                 case 1:
-                    System.out.println("In development 🪚");
+                    System.out.println("\nAdventure 🌋 – In development 🪚");
+                    goBackToMainMenu();
                     break;
                 case 2:
-                    System.out.println("In development 🪚");
+                    System.out.println("\nArmoury ⚔️ – In development 🪚");
+                    goBackToMainMenu();
                     break;
                 case 3:
-                    System.out.println("Leveling up ⚡️");
+                    System.out.println("\nLeveling up ⚡️");
                     player.levelUp(player);
+                    goBackToMainMenu();
                     break;
                 case 4:
-                    System.out.println("Showing Stats – In development 🪚");
+                    System.out.println("\nShowing Stats 📊");
                     System.out.println("\n" + player);
+                    goBackToMainMenu();
                     break;
                 case 5:
-                    System.out.println("Exiting Game");
+                    System.out.println("\nExiting Game ❌");
                     run = false;
                     break;
                 default:
-                    System.out.println("Option does not exist!");
+                    System.out.println("\nOption does not exist!");
+                    goBackToMainMenu();
             }
         }
 
