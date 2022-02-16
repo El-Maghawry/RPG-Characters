@@ -12,10 +12,10 @@ public class EquipmentMenu extends Main {
         System.out.println(spaceBetweenMenus +
                 "\n○ ○ ○  ○ ○ ○ ⚔️ Armoury ⚔️ ○ ○ ○  ○ ○ ○\n");
         System.out.print("""
-                "1. Show Gear Stats 📊
+                 1. Show Gear Stats 📊
                  2. Show Available Gear  🪄 ⚔️ 🏹 🗡
                  3. Equip items ⚡️
-                 4. Back to Main Menu ..."
+                 4. Back to Main Menu ...
                 """ + smallSpaceEndMenu);
 
         Scanner o = new Scanner(System.in);

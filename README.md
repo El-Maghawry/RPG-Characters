@@ -3,6 +3,7 @@
 RPG-Characters concept for a hypothetical RPG game.
 
 All characters have the following properties, name, level, experience, Base Primary attributes, Total Primary attributes
+![img.png](img.png)![img_1.png](img_1.png)![img_2.png](img_2.png)![img_4.png](img_4.png)
 
 ### Ranger 🏹
 
@@ -27,4 +28,3 @@ The game and every character needs to be able to have:
 - level up (assign and update the new attributes);
 - wield the right equipment at the right time (InvalidWeaponException/InvalidArmorException);
 - Character stats display (name, level, strength, dexterity, intelligence, weapon and total DPS, base + gear bonus);
-- 

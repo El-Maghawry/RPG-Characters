@@ -61,7 +61,7 @@ public class Main {
             System.out.println(
                     "\n○ ○ ○  ○ ○ ○ Main Menu ○ ○ ○  ○ ○ ○\n");
             System.out.print("""
-                    "1.Go on an Adventure 🌋 ❌
+                    1.Go on an Adventure 🌋 ❌
                     2.Go to Armoury ⚔️
                     3.Level-up ⬆️
                     4.Show Stats 📊
