@@ -109,7 +109,6 @@ public class CharacterRPG {
         return type;
     }
 
-
     public Integer getLevel() {
         return level;
     }
@@ -180,8 +179,12 @@ public class CharacterRPG {
     }
 
     public static void setCharacterEquipment(String slot, Item item) {
-        characterEquipment.put(Slot.valueOf(slot), item);
+        CharacterRPG.characterEquipment.put(Slot.valueOf(slot), item);
     }
+
+//    public static void setCharacterEquipment(HashMap<Slot, Item> characterEquipment) {
+//        CharacterRPG.characterEquipment = characterEquipment;
+//    }
 
     @Override
     public String toString() {
@@ -191,7 +194,7 @@ public class CharacterRPG {
                 "\nStrength = " + strength +
                 "\nDexterity = " + dexterity +
                 "\nIntelligence = " + intelligence +
-                "\n\nEquipment = " + characterEquipment;
+                "\n\nEquipment\n" + characterEquipment;
 //                ", weaponDPS=" + weaponDPS +
 //                ", CharacterDPS=" + CharacterDPS +
 //                ", baseAttributes=" + baseAttributes +

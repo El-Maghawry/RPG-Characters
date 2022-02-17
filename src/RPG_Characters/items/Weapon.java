@@ -8,7 +8,7 @@ public class Weapon extends Item {
     private final Integer attSpeed;
     private final Integer WeaponDPS;
 
-    public static Weapon Bronze_SWORD;
+
     public static Weapon AXE;
     public static Weapon DAGGER;
     public static Weapon HAMMER;
@@ -49,8 +49,8 @@ public class Weapon extends Item {
 
     @Override
     public String toString() {
-        return  super.getName() + " | Type= " + getWeaponType()  +
-                "\nLevel = " +getLevel() +
+        return  "\n" + super.getName() + " | Type= " + getWeaponType()  +
+                "\nRequired Level = " +getLevel() +
                 "\nSpeed = " + getAttSpeed() +
                 "\nDamage = " + getDamage() +
                 "\nDPS weapon = " + getWeaponDPS() + "\n"

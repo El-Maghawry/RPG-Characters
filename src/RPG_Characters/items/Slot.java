@@ -6,6 +6,6 @@ public enum Slot {
     BODY,
     LEGS;
 
-    }
+}
 
 

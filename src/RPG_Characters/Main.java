@@ -1,35 +1,19 @@
 package RPG_Characters;
 
-import RPG_Characters.items.Armour;
-import RPG_Characters.items.Slot;
-import RPG_Characters.items.Weapon;
-
 import java.util.Scanner;
 
-import static RPG_Characters.CharacterRPG.setCharacterEquipment;
-import static RPG_Characters.EquipmentMenu.equipmentMenu;
-import static RPG_Characters.items.Armour.*;
-import static RPG_Characters.items.Weapon.*;
+import static RPG_Characters.menu.EquipmentMenu.equipmentMenu;
 
 
 public class Main {
-    public static CharacterRPG Player;
+    public static CharacterRPG player;
     private static boolean run = true;
-    static final String spaceBetweenMenus = "\n\n\n\n\n\n\n\n\n\n\n";
-    static final String smallSpaceEndMenu = "\n\n\n-> ";
+    public static final String spaceBetweenMenus = "\n\n\n\n\n\n\n\n\n\n\n";
+    public static final String smallSpaceEndMenu = "\n\n\n-> ";
 
 
 
     public static void main(String[] args) {
-        //armour warrior
-        // create armour somewhere else?
-        Bronze_helm = new Armour("Bronze Helm", 1, Slot.HEAD, "warrior", 1);
-        Bronze_platbody = new Armour("Bronze Platebody", 1, Slot.BODY, "warrior", 5);
-        Bronze_platelegs = new Armour("Bronze Platelegs", 1, Slot.LEGS, "warrior", 2);
-        Bronze_SWORD = new Weapon("Bronze Sword","melee",1, Slot.WEAPON, 10, 2);
-
-
-        // Startup screen
         System.out.println("""
                                                                                                                                                          
                                                                                                                   \\`-\\`-._
@@ -47,13 +31,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String userName = sc.nextLine();
 
-        CharacterRPG player = new CharacterRPG(userName);
-        Player = player;
+        player = new CharacterRPG(userName);
 
-        setCharacterEquipment(String.valueOf(Slot.HEAD), Bronze_helm);
-        setCharacterEquipment(String.valueOf(Slot.BODY), Bronze_platbody);
-        setCharacterEquipment(String.valueOf(Slot.LEGS), Bronze_platelegs);
-        setCharacterEquipment(String.valueOf(Slot.WEAPON), Bronze_SWORD);
+
 
         while (run) {
             System.out.println(spaceBetweenMenus +

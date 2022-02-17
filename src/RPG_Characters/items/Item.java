@@ -40,11 +40,9 @@ public abstract class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                ", level=" + level +
-                ", slotItem=" + slotItem +
-                '}';
+        return  "\nName =" + name +
+                "\nLevel=" + level +
+                "\nSlotItem=" + slotItem;
     }
 }
 

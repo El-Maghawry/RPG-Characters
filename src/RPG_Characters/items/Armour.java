@@ -6,9 +6,8 @@ public class Armour extends Item{
     private String armourType;
     private Integer Attribute;
 
-    public static Armour Bronze_helm;
-    public static Armour Bronze_platbody;
-    public static Armour Bronze_platelegs;
+
+
 
     public Armour(String name, Integer level, Slot slotItem, String armourType, Integer Attribute) {
         super(name, level, slotItem);
@@ -37,8 +36,8 @@ public class Armour extends Item{
 
     @Override
     public String toString() {
-        return  super.getName() +
-                "\nlevel = " + getLevel() +
+        return  "\n" + super.getName() +
+                "\nRequired level = " + getLevel() +
                 "\nslot = " + getSlotItem() +
                 "\nType = " + getArmourType() +
                 "\nBonus Attribute = " + getAttribute() + "\n";
