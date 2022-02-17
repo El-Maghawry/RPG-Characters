@@ -1,6 +1,6 @@
 package RPG_Characters.characters;
 
-public class PrimaryAttribute {
+public class CharacterDPS {
     private static Integer primaryAttribute;
 
 

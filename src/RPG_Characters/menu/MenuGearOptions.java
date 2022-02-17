@@ -4,7 +4,7 @@ import RPG_Characters.items.Slot;
 
 import java.util.Scanner;
 
-import static RPG_Characters.characters.CharacterRPG.setCharacterEquipment;
+import static RPG_Characters.characters.Character.setCharacterEquipment;
 import static RPG_Characters.Main.*;
 import static RPG_Characters.items.CreationGear.*;
 import static RPG_Characters.menu.MainMenu.smallSpaceEndMenu;
@@ -40,7 +40,7 @@ public class MenuGearOptions {
                 setCharacterEquipment(String.valueOf(Slot.HEAD), Wizards_Hat);
                 setCharacterEquipment(String.valueOf(Slot.BODY), Wizards_Robe_Top);
                 setCharacterEquipment(String.valueOf(Slot.LEGS), Wizards_Robe_Bottom);
-                setCharacterEquipment(String.valueOf(Slot.WEAPON), Enchanted_Oak_Staff);
+                setCharacterEquipment(String.valueOf(Slot.WEAPON), Staff);
             }
 
         }
@@ -251,7 +251,7 @@ public class MenuGearOptions {
             }
             case 3 -> {
                 if (player.getTypeCharacter().equals("mage") && player.getLevel() >= 1) {
-                    setCharacterEquipment(String.valueOf(Slot.WEAPON), Enchanted_Oak_Staff);
+                    setCharacterEquipment(String.valueOf(Slot.WEAPON), Staff);
                     System.out.println(message);
                 } else {System.out.println("\nYou need to be of Mage type with the required Level to wear this.");}
                 goBacktoPrevious();
@@ -259,7 +259,7 @@ public class MenuGearOptions {
             }
             case 4 -> {
                 if (player.getTypeCharacter().equals("mage") && player.getLevel() >= 5) {
-                    setCharacterEquipment(String.valueOf(Slot.WEAPON), Oak_Wand);
+                    setCharacterEquipment(String.valueOf(Slot.WEAPON), Wand);
                     System.out.println(message);
                 } else {System.out.println("\nYou need to be of Mage type with the required Level to wear this.");}
                 goBacktoPrevious();

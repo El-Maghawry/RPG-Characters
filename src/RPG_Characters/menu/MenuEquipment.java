@@ -1,6 +1,6 @@
 package RPG_Characters.menu;
 
-import RPG_Characters.characters.CharacterRPG;
+import RPG_Characters.characters.Character;
 
 import java.util.Scanner;
 
@@ -32,7 +32,7 @@ public class MenuEquipment {
         switch (option) {  //Strings different data types throw an error
             case 1 -> {
                 System.out.println("\nShow Gear Stats \uD83D\uDCCA\n");
-                System.out.println(CharacterRPG.getCharacterEquipment());
+                System.out.println(Character.getCharacterEquipment());
                 goBacktoPrevious();
                 equipmentMenu();
             }

@@ -2,12 +2,12 @@ package RPG_Characters.menu;
 
 import java.util.Scanner;
 
-import static RPG_Characters.Main.*;
+import static RPG_Characters.Main.player;
+import static RPG_Characters.characters.TotalAttribute.CalculateTotalAttribute;
 import static RPG_Characters.menu.MainMenu.smallSpaceEndMenu;
 import static RPG_Characters.menu.MainMenu.spaceBetweenMenus;
 import static RPG_Characters.menu.MenuEquipment.equipmentMenu;
 import static RPG_Characters.menu.MenuGearOptions.*;
-import static RPG_Characters.menu.MenuGearOptions.wearAllGearForMyType;
 import static RPG_Characters.menu.Utility.goBacktoPrevious;
 
 public class MenuSelectSlot {
@@ -33,6 +33,7 @@ public class MenuSelectSlot {
             case 1 -> {
                 System.out.println("\nWearing All Gear For Your Type!\n");
                 wearAllGearForMyType();
+                System.out.println(CalculateTotalAttribute(player));;
                 goBacktoPrevious();
                 selectSlot();
             }

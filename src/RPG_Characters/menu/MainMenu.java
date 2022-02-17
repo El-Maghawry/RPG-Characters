@@ -14,15 +14,13 @@ public class MainMenu {
 
     public static void mainMenu() {
 
-
         while (run) {
-
             System.out.println(spaceBetweenMenus +
                     "Adventurer: " + player.getUsername() + " | Level: " + player.getLevel() + " | Type: " + player.getTypeCharacter());
             System.out.println(
                     "\n○ ○ ○  ○ ○ ○ Main Menu ○ ○ ○  ○ ○ ○\n");
             System.out.print("""
-                    1. ❌ Go on an Adventure 🌋
+                    1. Go on an Adventure 🌋 (In development)
                     2. Go to Armoury ⚔️
                     3. Level-up ⬆️
                     4. Show Stats 📊

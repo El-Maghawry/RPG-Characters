@@ -8,7 +8,10 @@ import java.util.Locale;
 import java.util.Scanner;
 
 
-public class CharacterRPG {
+import static RPG_Characters.characters.TotalAttribute.*;
+
+
+public class Character {  // Is it feasible or necessary to still and try make this an abstract class?
     private String username;
     private String type;
     private String input = " ";
@@ -18,17 +21,13 @@ public class CharacterRPG {
     private Integer intelligence;
     private Integer weaponDPS;
     private Integer CharacterDPS;
-    private Integer baseAttributes;
-    private Integer TotalAttributes;
     private static HashMap<Slot, Item> characterEquipment;
 
-    public CharacterRPG(String username) {
+    public Character(String username) {
         this.username = username;
         this.level = 1;
         this.weaponDPS = 0;
         this.CharacterDPS = 0;
-        this.baseAttributes = 0;
-        this.TotalAttributes = 0;
         characterEquipment = new HashMap<>();
 
         while ((!(input.equals("warrior") || input.equals("ranger") || input.equals("rogue") || input.equals("mage")))) {
@@ -122,34 +121,14 @@ public class CharacterRPG {
         CharacterDPS = characterDPS;
     }
 
-    public Integer getBaseAttributes() {
-        return baseAttributes;
-    }
-
-    public void setBaseAttributes(Integer baseAttributes) {
-        this.baseAttributes = baseAttributes;
-    }
-
-    public Integer getTotalAttributes() {
-        return TotalAttributes;
-    }
-
-    public void setTotalAttributes(Integer totalAttributes) {
-        TotalAttributes = totalAttributes;
-    }
 
     public static HashMap<Slot, Item> getCharacterEquipment() {
         return characterEquipment;
     }
 
     public static void setCharacterEquipment(String slot, Item item) {
-        CharacterRPG.characterEquipment.put(Slot.valueOf(slot), item);
+        Character.characterEquipment.put(Slot.valueOf(slot), item);
     }
-
-
-//    public static void setCharacterEquipment(HashMap<Slot, Item> characterEquipment) {
-//        CharacterRPG.characterEquipment = characterEquipment;
-//    }
 
     @Override
     public String toString() {
@@ -159,11 +138,12 @@ public class CharacterRPG {
                 "\nStrength = " + strength +
                 "\nDexterity = " + dexterity +
                 "\nIntelligence = " + intelligence +
-                "\n\nEquipment\n" + characterEquipment;
+                "\n\nEquipment:\n" + characterEquipment +
+                "\n\nBaseAttributes = " + getBaseAttribute() +
+                "\nTotalAttributes = " + getTotalAttribute();
 //                ", weaponDPS=" + weaponDPS +
 //                ", CharacterDPS=" + CharacterDPS +
-//                ", baseAttributes=" + baseAttributes +
-//                ", TotalAttributes=" + TotalAttributes +
-//                "\n, characterEquipment=" + characterEquipment
+
+
     }
 }

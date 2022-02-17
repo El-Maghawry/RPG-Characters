@@ -2,8 +2,7 @@ package RPG_Characters.characters;
 
 public class LevelUp {
 
-
-    public static void levelUp(CharacterRPG namePlayer) {
+    public static void levelUp(Character namePlayer) {
         switch (namePlayer.getTypeCharacter()) {
             case "warrior" -> {
                 namePlayer.setLevel(namePlayer.getLevel() + 1);

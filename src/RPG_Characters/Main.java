@@ -1,10 +1,10 @@
 package RPG_Characters;
-import RPG_Characters.characters.CharacterRPG;
+import RPG_Characters.characters.Character;
 import java.util.Scanner;
 import static RPG_Characters.menu.MainMenu.mainMenu;
 
 public class Main {
-    public static CharacterRPG player;
+    public static Character player;
 
     public static void main(String[] args) {
         // Welcome Screen
@@ -25,7 +25,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String userName = sc.nextLine();
 
-        player = new CharacterRPG(userName);
+        player = new Character(userName);
         mainMenu();
     }
 

@@ -1,10 +1,9 @@
 package RPG_Characters.items;
 
-import static RPG_Characters.characters.CharacterRPG.getCharacterEquipment;
+import static RPG_Characters.characters.Character.getCharacterEquipment;
 
 public class Weapon extends Item {
     private final String WeaponType;
-    private final Integer damage;
     private final Integer attSpeed;
     private final Integer WeaponDPS;
 
@@ -17,23 +16,19 @@ public class Weapon extends Item {
     public static Weapon WAND;
 
 
-    public Weapon(String name, String WeaponType, Integer level, Slot slotItem, Integer damage, Integer attSpeed) {
-        super(name, level, slotItem);
-        this.WeaponType = WeaponType;
-        this.damage = damage; // I ASSUME that damage is the same as attribute
+
+    public Weapon(String name, Integer level, Slot slotItem, Integer attribute, String weaponType, Integer attSpeed) {
+        super(name, level, slotItem, attribute);
+        WeaponType = weaponType;
         this.attSpeed = attSpeed;
-        this.WeaponDPS = attSpeed * damage; // the slower the weapon the bigger the damage?
+        this.WeaponDPS = attSpeed * attribute; // the slower the weapon the bigger the damage?
+    }  // I ASSUME that damage is the same as attribute
 
-
-    }
 
     public static String showStatsWeapon(){
         return getCharacterEquipment().get(Slot.WEAPON).toString();
     }
 
-    public Integer getDamage() {
-        return damage;
-    }
 
     public Integer getAttSpeed() {
         return attSpeed;
@@ -52,7 +47,7 @@ public class Weapon extends Item {
         return  "\n" + super.getName() + " | Type = " + getWeaponType()  +
                 "\nRequired Level = " +getLevel() +
                 "\nSpeed = " + getAttSpeed() +
-                "\nDamage = " + getDamage() +
+                "\nDamage = " + getWeaponDPS() +
                 "\nDPS weapon = " + getWeaponDPS() + "\n"
                 ;
     }

@@ -4,11 +4,14 @@ public abstract class Item {
     private String name;
     private Integer level;
     private Slot slotItem;
+    private Integer Attribute;
 
-    public Item(String name, Integer level, Slot slotItem) {
+
+    public Item(String name, Integer level, Slot slotItem, Integer attribute) {
         this.name = name;
         this.level = level;
         this.slotItem = slotItem;
+        Attribute = attribute;
     }
 
     protected Item() {
@@ -36,6 +39,10 @@ public abstract class Item {
 
     public void setSlotItem(Slot slotItem) {
         this.slotItem = slotItem;
+    }
+
+    public Integer getArmourAttribute() {
+        return Attribute;
     }
 
     @Override
