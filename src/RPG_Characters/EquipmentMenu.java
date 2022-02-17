@@ -10,11 +10,11 @@ public class EquipmentMenu extends Main {
 
     public static void equipmentMenu() {
         System.out.println(spaceBetweenMenus +
-                "\n○ ○ ○  ○ ○ ○ ⚔️ Armoury ⚔️ ○ ○ ○  ○ ○ ○\n");
+                "\n○ ○ ○  ○ ○ ○ ⚔️ Armoury ⚔️ ○ ○ ○  ○ ○ ○\n"); // TODO: 16/02/2022  Equip items menu needs to be done
         System.out.print("""
                  1. Show Gear Stats 📊
                  2. Show Available Gear  🪄 ⚔️ 🏹 🗡
-                 3. Equip items ⚡️
+                 3. Equip items ⚡️ 
                  4. Back to Main Menu ...
                 """ + smallSpaceEndMenu);
 
