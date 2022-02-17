@@ -24,7 +24,7 @@ public class MenuSelectSlot {
                  4. 🦿 View All Bottom Gear ->
                  5. 🗡 View All Weapons ->
                 -------------------------------------
-                 6. Back to Previous Menu ...
+                 0. Back to Previous Menu ...
                 """ + smallSpaceEndMenu);
 
         Scanner o = new Scanner(System.in);
@@ -57,11 +57,11 @@ public class MenuSelectSlot {
 
             case 5 -> {
                 System.out.println("\n\n");
-
+                weaponGear();
                 goBacktoPrevious();
-                selectSlot();
+
             }
-            case 6 -> {
+            case 0 -> {
                 equipmentMenu();
             }
             default -> {

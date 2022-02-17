@@ -26,7 +26,7 @@ public class MainMenu {
                     3. Level-up ⬆️
                     4. Show Stats 📊
                     -------------------------------------
-                    5.Exit Game ..."""
+                    0.Exit Game ..."""
                     + smallSpaceEndMenu);
 
             Scanner o = new Scanner(System.in);
@@ -51,7 +51,7 @@ public class MainMenu {
                     System.out.println("\n" + player);
                     goBacktoPrevious();
                 }
-                case 5 -> {
+                case 0 -> {
                     System.out.println(spaceBetweenMenus + "\n🛑 Exiting Game... Game has Ended... ");
                     run = false;
                 }

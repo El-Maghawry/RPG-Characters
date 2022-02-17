@@ -19,10 +19,10 @@ public class MenuEquipment {
         System.out.println("\n○ ○ ○  ○ ○ ○ 🪄⚔️ Armoury 🏹️🗡 ○ ○ ○  ○ ○ ○\n");
         System.out.print("""
                  1. Show Gear Stats 🥷🏿📊
-                 2. Show Available Gear My Type 🥷🏿 📜
+                 2. Show Available Gear for my Type 🥷🏿 📜
                  3. Equip items 🥷🏿 ⚡️
                  -------------------------------------
-                 4. Back to Main Menu ...
+                 0. Back to Main Menu ...
                 """ + smallSpaceEndMenu);
 
         Scanner o = new Scanner(System.in);
@@ -54,7 +54,7 @@ public class MenuEquipment {
 
             }
 
-            case 4 -> {}
+            case 0 -> {}
 
             default -> {
                 System.out.println(spaceBetweenMenus + "\nOption does not exist!\n");

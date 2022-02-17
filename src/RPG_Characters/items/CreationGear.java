@@ -1,6 +1,6 @@
 package RPG_Characters.items;
 
-public class CreateGear {
+public class CreationGear {
     //variables warrior level 1
     public static Armour Bronze_helm;
     public static Armour Bronze_platbody;
@@ -18,6 +18,7 @@ public class CreateGear {
     public static Armour Wizards_Robe_Top;
     public static Armour Wizards_Robe_Bottom;
     public static Weapon Enchanted_Oak_Staff;
+    public static Weapon Oak_Wand;
 
 
     public static void createGear() {
@@ -38,6 +39,7 @@ public class CreateGear {
         Wizards_Robe_Top = new Armour("Wizard Robe Top", 1, Slot.BODY, "mage", 3);
         Wizards_Robe_Bottom = new Armour("Soft Leather legs", 1, Slot.LEGS, "mage", 3);
         Enchanted_Oak_Staff = new Weapon("Short Oak Bow","mage",1, Slot.WEAPON, 8, 2);
+        Oak_Wand = new Weapon("Short Oak Bow","mage",5, Slot.WEAPON, 13, 5);
 
     }
 }

@@ -49,7 +49,7 @@ public class Weapon extends Item {
 
     @Override
     public String toString() {
-        return  "\n" + super.getName() + " | Type= " + getWeaponType()  +
+        return  "\n" + super.getName() + " | Type = " + getWeaponType()  +
                 "\nRequired Level = " +getLevel() +
                 "\nSpeed = " + getAttSpeed() +
                 "\nDamage = " + getDamage() +

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import static RPG_Characters.characters.CharacterRPG.setCharacterEquipment;
 import static RPG_Characters.Main.*;
-import static RPG_Characters.items.CreateGear.*;
+import static RPG_Characters.items.CreationGear.*;
 import static RPG_Characters.menu.MainMenu.smallSpaceEndMenu;
 import static RPG_Characters.menu.MainMenu.spaceBetweenMenus;
 import static RPG_Characters.menu.MenuSelectSlot.selectSlot;
@@ -52,12 +52,12 @@ public class MenuGearOptions {
         System.out.println(spaceBetweenMenus + "Adventurer: " + player.getUsername() + " | Level: " + player.getLevel() + " | Type: " + player.getTypeCharacter());
         System.out.println("\n○ ○ ○  ○ ○ ○ 🪄⚔️ Head Gear 🏹️🗡 ○ ○ ○  ○ ○ ○\n"); //
         System.out.print("""
-                 Select Head Gear:
-                 1. Bronze Helm
-                 2. Coif
-                 3. Wizard Hat
+                 Select Head Gear
+                 1. Bronze Helm     | Level: 1 | Type: Warrior
+                 2. Coif            | Level: 1 | Type: Ranger/Rogue
+                 3. Wizard Hat      | Level: 1 | Type: Mage
                 -------------------------------------
-                 4. Back to Previous Menu ...
+                 0. Back to Previous Menu ...
                 """ + smallSpaceEndMenu);
 
         Scanner o = new Scanner(System.in);
@@ -65,7 +65,7 @@ public class MenuGearOptions {
 
         switch (option) {  //Strings different data types throw an error
             case 1 -> {
-                if (player.getTypeCharacter().equals("warrior") && player.getLevel().equals(1)) {
+                if (player.getTypeCharacter().equals("warrior") && player.getLevel() >= 1) {
                     setCharacterEquipment(String.valueOf(Slot.HEAD), Bronze_helm);
                     System.out.println(message);
                 } else {
@@ -75,7 +75,7 @@ public class MenuGearOptions {
                 headGear();
             }
             case 2 -> {
-                if (player.getTypeCharacter().equals("rogue") || player.getTypeCharacter().equals("ranger") && player.getLevel().equals(1)) {
+                if (player.getTypeCharacter().equals("rogue") || player.getTypeCharacter().equals("ranger") && player.getLevel() >= 1) {
                     setCharacterEquipment(String.valueOf(Slot.HEAD), Coif);
                     System.out.println(message);
                 } else {
@@ -85,7 +85,7 @@ public class MenuGearOptions {
                 headGear();
             }
             case 3 -> {
-                if (player.getTypeCharacter().equals("mage") && player.getLevel().equals(1)) {
+                if (player.getTypeCharacter().equals("mage") && player.getLevel() >= 1) {
                     setCharacterEquipment(String.valueOf(Slot.HEAD), Wizards_Hat);
                     System.out.println(message);
                 } else {
@@ -94,7 +94,7 @@ public class MenuGearOptions {
                 goBacktoPrevious();
                 headGear();
             }
-            case 4 -> selectSlot();
+            case 0 -> selectSlot();
             default -> {
                 System.out.println(spaceBetweenMenus + "\nOption does not exist!\n");
                 goBacktoPrevious();
@@ -112,18 +112,18 @@ public class MenuGearOptions {
         System.out.println("\n○ ○ ○  ○ ○ ○ 🪄⚔️ Head Gear 🏹️🗡 ○ ○ ○  ○ ○ ○\n"); //
         System.out.print("""
                  Select Head Gear:
-                 1. Bronze Plate Body
-                 2. Soft Leather Body
-                 3. Wizards Robe Top
+                 1. Bronze Plate Body       | Level: 1 | Type: Warrior
+                 2. Soft Leather Body       | Level: 1 | Type: Ranger/Rogue
+                 3. Wizards Robe Top        | Level: 1 | Type: Mage
                 -------------------------------------
-                 4. Back to Previous Menu ...
+                 0. Back to Previous Menu ...
                 """ + smallSpaceEndMenu);
 
         Scanner o = new Scanner(System.in);
         int option = o.nextInt();
         switch (option) {  //Strings different data types throw an error
             case 1 -> {
-                if (player.getTypeCharacter().equals("warrior") && player.getLevel().equals(1)) {
+                if (player.getTypeCharacter().equals("warrior") && player.getLevel() >= 1) {
                     setCharacterEquipment(String.valueOf(Slot.HEAD), Bronze_platbody);
                     System.out.println(message);
                 } else {System.out.println("\nYou need to be of Warrior type with the required Level to wear this.");}
@@ -131,7 +131,7 @@ public class MenuGearOptions {
                 bodyGear();
             }
             case 2 -> {
-                if (player.getTypeCharacter().equals("rogue") || player.getTypeCharacter().equals("ranger") && player.getLevel().equals(1)) {
+                if (player.getTypeCharacter().equals("rogue") || player.getTypeCharacter().equals("ranger") && player.getLevel() >= 1) {
                     setCharacterEquipment(String.valueOf(Slot.HEAD), Soft_Leather_Body);
                     System.out.println(message);
                 } else {System.out.println("\nYou need to be of Ranger or Rogue type with the required Level to wear this.");}
@@ -139,14 +139,14 @@ public class MenuGearOptions {
                 bodyGear();
             }
             case 3 -> {
-                if (player.getTypeCharacter().equals("mage") && player.getLevel().equals(1)) {
+                if (player.getTypeCharacter().equals("mage") && player.getLevel() >= 1) {
                     setCharacterEquipment(String.valueOf(Slot.HEAD), Wizards_Robe_Top);
                     System.out.println(message);
                 } else {System.out.println("\nYou need to be of Mage type with the required Level to wear this.");}
                 goBacktoPrevious();
                 bodyGear();
             }
-            case 4 -> selectSlot();
+            case 0 -> selectSlot();
             default -> {
                 System.out.println(spaceBetweenMenus + "\nOption does not exist!\n");
                 goBacktoPrevious();
@@ -163,11 +163,11 @@ public class MenuGearOptions {
         System.out.println("\n○ ○ ○  ○ ○ ○ 🪄⚔️ Head Gear 🏹️🗡 ○ ○ ○  ○ ○ ○\n"); //
         System.out.print("""
                  Select Head Gear:
-                 1. Bronze Plate Legs
-                 2. Soft Leather Chaps
-                 3. Wizards Robe Bottom
+                 1. Bronze Plate Legs       | Level: 1 | Type: Warrior
+                 2. Soft Leather Chaps      | Level: 1 | Type: Ranger/Rogue
+                 3. Wizards Robe Bottom     | Level: 1 | Type: Mage
                 -------------------------------------
-                 4. Back to Previous Menu ...
+                 0. Back to Previous Menu ...
                 """ + smallSpaceEndMenu);
 
         Scanner o = new Scanner(System.in);
@@ -175,7 +175,7 @@ public class MenuGearOptions {
         switch (option) {  //Strings different data types throw an error
 
             case 1 -> {
-                if (player.getTypeCharacter().equals("warrior") && player.getLevel().equals(1)) {
+                if (player.getTypeCharacter().equals("warrior") && player.getLevel() >= 1) {
                     setCharacterEquipment(String.valueOf(Slot.HEAD), Bronze_platelegs);
                     System.out.println(message);
                 } else {
@@ -185,7 +185,7 @@ public class MenuGearOptions {
                 legsGear();
             }
             case 2 -> {
-                if (player.getTypeCharacter().equals("rogue") || player.getTypeCharacter().equals("ranger") && player.getLevel().equals(1)) {
+                if (player.getTypeCharacter().equals("rogue") || player.getTypeCharacter().equals("ranger") && player.getLevel() >= 1) {
                     setCharacterEquipment(String.valueOf(Slot.HEAD), Soft_Leather_Chaps);
                     System.out.println(message);
                 } else {
@@ -195,7 +195,7 @@ public class MenuGearOptions {
                 legsGear();
             }
             case 3 -> {
-                if (player.getTypeCharacter().equals("mage") && player.getLevel().equals(1)) {
+                if (player.getTypeCharacter().equals("mage") && player.getLevel() >= 1) {
                     setCharacterEquipment(String.valueOf(Slot.HEAD), Wizards_Robe_Bottom);
                     System.out.println(message);
                 } else {
@@ -204,7 +204,7 @@ public class MenuGearOptions {
                 goBacktoPrevious();
                 legsGear();
             }
-            case 4 -> selectSlot();
+            case 0 -> selectSlot();
             default -> {
                 System.out.println(spaceBetweenMenus + "\nOption does not exist!\n");
                 goBacktoPrevious();
@@ -216,6 +216,63 @@ public class MenuGearOptions {
 
     }
 
-//    public static void weaponGear() {
-//    }
+    public static void weaponGear() {
+        createGear();
+        System.out.println(spaceBetweenMenus + "Adventurer: " + player.getUsername() + " | Level: " + player.getLevel() + " | Type: " + player.getTypeCharacter());
+        System.out.println("\n○ ○ ○  ○ ○ ○ 🪄⚔️ Weapons 🏹️🗡 ○ ○ ○  ○ ○ ○\n"); //
+        System.out.print("""
+                 Select Weapons:
+                 1. Bronze Sword            | Level: 1 | Type: Warrior/Rogue
+                 2. Oak Short Bow           | Level: 1 | Type: Ranger
+                 3. Enchanted Oak Staff     | Level: 1 | Type: Mage
+                 4. Oak Wand                | Level: 5 | Type: Mage
+                -------------------------------------
+                 0. Back to Previous Menu ...
+                """ + smallSpaceEndMenu);
+
+        Scanner o = new Scanner(System.in);
+        int option = o.nextInt();
+        switch (option) {  //Strings different data types throw an error
+            case 1 -> {
+                if (player.getTypeCharacter().equals("warrior") | player.getTypeCharacter().equals("Rogue") && player.getLevel() >= 1) {
+                    setCharacterEquipment(String.valueOf(Slot.WEAPON), Bronze_SWORD);
+                    System.out.println(message);
+                } else {System.out.println("\nYou need to be of Warrior or Rogue type with the required Level to wear this.");}
+                goBacktoPrevious();
+                weaponGear();
+            }
+            case 2 -> {
+                if (player.getTypeCharacter().equals("ranger") && player.getLevel() >= 1) {
+                    setCharacterEquipment(String.valueOf(Slot.WEAPON), Short_Oak_Bow);
+                    System.out.println(message);
+                } else {System.out.println("\nYou need to be of Ranger or Rogue type with the required Level to wear this.");}
+                goBacktoPrevious();
+                weaponGear();
+            }
+            case 3 -> {
+                if (player.getTypeCharacter().equals("mage") && player.getLevel() >= 1) {
+                    setCharacterEquipment(String.valueOf(Slot.WEAPON), Enchanted_Oak_Staff);
+                    System.out.println(message);
+                } else {System.out.println("\nYou need to be of Mage type with the required Level to wear this.");}
+                goBacktoPrevious();
+                weaponGear();
+            }
+            case 4 -> {
+                if (player.getTypeCharacter().equals("mage") && player.getLevel() >= 5) {
+                    setCharacterEquipment(String.valueOf(Slot.WEAPON), Oak_Wand);
+                    System.out.println(message);
+                } else {System.out.println("\nYou need to be of Mage type with the required Level to wear this.");}
+                goBacktoPrevious();
+                weaponGear();
+            }
+            case 0 -> selectSlot();
+            default -> {
+                System.out.println(spaceBetweenMenus + "\nOption does not exist!\n");
+                goBacktoPrevious();
+                weaponGear();
+            }
+
+        }
+
+    }
 }
