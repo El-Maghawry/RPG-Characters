@@ -182,6 +182,7 @@ public class CharacterRPG {
         CharacterRPG.characterEquipment.put(Slot.valueOf(slot), item);
     }
 
+
 //    public static void setCharacterEquipment(HashMap<Slot, Item> characterEquipment) {
 //        CharacterRPG.characterEquipment = characterEquipment;
 //    }

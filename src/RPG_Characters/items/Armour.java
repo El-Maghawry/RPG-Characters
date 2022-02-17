@@ -36,10 +36,9 @@ public class Armour extends Item{
 
     @Override
     public String toString() {
-        return  "\n" + super.getName() +
+        return  "\n" + super.getName() +" | Type= " + getArmourType()  +
                 "\nRequired level = " + getLevel() +
                 "\nslot = " + getSlotItem() +
-                "\nType = " + getArmourType() +
                 "\nBonus Attribute = " + getAttribute() + "\n";
     }
 }

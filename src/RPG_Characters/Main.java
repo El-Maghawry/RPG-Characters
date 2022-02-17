@@ -2,7 +2,7 @@ package RPG_Characters;
 
 import java.util.Scanner;
 
-import static RPG_Characters.menu.EquipmentMenu.equipmentMenu;
+import static RPG_Characters.menu.MenuEquipment.equipmentMenu;
 
 
 public class Main {
@@ -45,6 +45,7 @@ public class Main {
                     2.Go to Armoury ⚔️
                     3.Level-up ⬆️
                     4.Show Stats 📊
+                    -------------------------------------
                     5.Exit Game ..."""
                     + smallSpaceEndMenu);
 

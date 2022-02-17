@@ -1,21 +1,23 @@
 package RPG_Characters.menu;
 
+import RPG_Characters.CharacterRPG;
+
 import java.util.Scanner;
 
 import static RPG_Characters.Main.*;
-import static RPG_Characters.items.Armour.showStatsArmour;
 import static RPG_Characters.items.AvailableGear.*;
-import static RPG_Characters.menu.SelectSlot.selectSlot;
+import static RPG_Characters.menu.MenuSelectSlot.selectSlot;
 
-public class EquipmentMenu{
+public class MenuEquipment {
 
     public static void equipmentMenu() {
         System.out.println(spaceBetweenMenus +
                 "\n○ ○ ○  ○ ○ ○ 🪄⚔️ Armoury 🏹️🗡 ○ ○ ○  ○ ○ ○\n"); // TODO: 16/02/2022  Equip items menu needs to be done
         System.out.print("""
-                 1. Show Gear Stats 📊 (Stop wearing bronze all the time ❌)
+                 1. Show Gear Stats 🥷🏿📊
                  2. Show Available Gear My Type  📜
-                 3. Equip items ⚡️ 
+                 3. Equip items ⚡️
+                 -------------------------------------
                  4. Back to Main Menu ...
                 """ + smallSpaceEndMenu);
 
@@ -26,7 +28,7 @@ public class EquipmentMenu{
         switch (option) {  //Strings different data types throw an error
             case 1 -> {
                 System.out.println("\nShow Gear Stats \uD83D\uDCCA\n");
-                System.out.println(showStatsArmour());
+                System.out.println(CharacterRPG.getCharacterEquipment());
                 goBacktoPrevious();
                 equipmentMenu();
             }
