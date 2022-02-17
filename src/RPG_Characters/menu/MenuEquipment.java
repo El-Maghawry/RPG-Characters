@@ -1,22 +1,26 @@
 package RPG_Characters.menu;
 
-import RPG_Characters.CharacterRPG;
+import RPG_Characters.characters.CharacterRPG;
 
 import java.util.Scanner;
 
 import static RPG_Characters.Main.*;
 import static RPG_Characters.items.AvailableGear.*;
+import static RPG_Characters.menu.MainMenu.smallSpaceEndMenu;
+import static RPG_Characters.menu.MainMenu.spaceBetweenMenus;
 import static RPG_Characters.menu.MenuSelectSlot.selectSlot;
+import static RPG_Characters.menu.Utility.goBacktoPrevious;
 
 public class MenuEquipment {
 
     public static void equipmentMenu() {
         System.out.println(spaceBetweenMenus +
-                "\n○ ○ ○  ○ ○ ○ 🪄⚔️ Armoury 🏹️🗡 ○ ○ ○  ○ ○ ○\n"); // TODO: 16/02/2022  Equip items menu needs to be done
+                "Adventurer: " + player.getUsername() + " | Level: "+ player.getLevel() + " | Type: "+ player.getTypeCharacter());
+        System.out.println("\n○ ○ ○  ○ ○ ○ 🪄⚔️ Armoury 🏹️🗡 ○ ○ ○  ○ ○ ○\n");
         System.out.print("""
                  1. Show Gear Stats 🥷🏿📊
-                 2. Show Available Gear My Type  📜
-                 3. Equip items ⚡️
+                 2. Show Available Gear My Type 🥷🏿 📜
+                 3. Equip items 🥷🏿 ⚡️
                  -------------------------------------
                  4. Back to Main Menu ...
                 """ + smallSpaceEndMenu);
@@ -50,8 +54,8 @@ public class MenuEquipment {
 
             }
 
-            case 4 -> { // Back to main menu
-            }
+            case 4 -> {}
+
             default -> {
                 System.out.println(spaceBetweenMenus + "\nOption does not exist!\n");
                 goBacktoPrevious();

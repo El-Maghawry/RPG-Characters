@@ -1,6 +1,6 @@
 package RPG_Characters.items;
 
-import static RPG_Characters.CharacterRPG.getCharacterEquipment;
+import static RPG_Characters.characters.CharacterRPG.getCharacterEquipment;
 
 public class Weapon extends Item {
     private final String WeaponType;

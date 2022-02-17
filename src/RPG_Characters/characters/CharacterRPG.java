@@ -1,4 +1,4 @@
-package RPG_Characters;
+package RPG_Characters.characters;
 
 import RPG_Characters.items.Item;
 import RPG_Characters.items.Slot;
@@ -104,6 +104,11 @@ public class CharacterRPG {
 
 
 //    Getters & Setters
+
+
+    public String getUsername() {
+        return username;
+    }
 
     public String getTypeCharacter() {
         return type;

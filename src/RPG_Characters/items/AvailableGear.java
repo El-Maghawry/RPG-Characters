@@ -13,7 +13,7 @@ public class AvailableGear {
 
     }
 
-    public static String showAvailableRangerGear(){ // TODO: 16/02/2022 make a class for this
+    public static String showAvailableRangerGear(){
         return  "Coif – Level 1 Required" +
                 "\nSoft Leather body – Level 1 Required"+
                 "\nSoft Leather legs – Level 1 Required"+
@@ -21,14 +21,14 @@ public class AvailableGear {
 
     }
 
-    public static String showAvailableMageGear(){ // TODO: 16/02/2022 make a class for this
+    public static String showAvailableMageGear(){
         return  "Wizard hat – Level 1 Required" +
                 "\nWizard Robe-top – Level 1 Required"+
                 "\nWizard Robe-bottom – Level 1 Required"+
                 "\nOak Staff – Level 1 Required"+
                 "\nOak wand – Level 5 Required";
     }
-    public static String showAvailableRogueGear(){ // TODO: 16/02/2022 make a class for this
+    public static String showAvailableRogueGear(){
         return  "If there is time ";
         // TODO: 16/02/2022 name the rogue gear.
     }

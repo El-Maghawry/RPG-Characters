@@ -3,17 +3,20 @@ package RPG_Characters.menu;
 import java.util.Scanner;
 
 import static RPG_Characters.Main.*;
+import static RPG_Characters.menu.MainMenu.smallSpaceEndMenu;
+import static RPG_Characters.menu.MainMenu.spaceBetweenMenus;
 import static RPG_Characters.menu.MenuEquipment.equipmentMenu;
 import static RPG_Characters.menu.MenuGearOptions.*;
 import static RPG_Characters.menu.MenuGearOptions.wearAllGearForMyType;
+import static RPG_Characters.menu.Utility.goBacktoPrevious;
 
 public class MenuSelectSlot {
 
     public static void selectSlot() {
         // this is made only so the user is allowed to choose the wrong type and we can trow an error
-
         System.out.println(spaceBetweenMenus +
-                "\n○ ○ ○  ○ ○ ○ 🪄⚔️ Armoury 🏹️🗡 ○ ○ ○  ○ ○ ○\n"); //
+                "Adventurer: " + player.getUsername() + " | Level: "+ player.getLevel() + " | Type: "+ player.getTypeCharacter());
+        System.out.println("\n○ ○ ○  ○ ○ ○ 🪄⚔️ Armoury 🏹️🗡 ○ ○ ○  ○ ○ ○\n"); //
         System.out.print("""
                  1. ⭐️ Wear All Gear for my Type!
                  2. 🥷🏿 View All Head Gear ->
