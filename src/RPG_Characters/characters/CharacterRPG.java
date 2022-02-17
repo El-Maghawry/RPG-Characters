@@ -22,8 +22,6 @@ public class CharacterRPG {
     private Integer TotalAttributes;
     private static HashMap<Slot, Item> characterEquipment;
 
-
-
     public CharacterRPG(String username) {
         this.username = username;
         this.level = 1;
@@ -66,46 +64,7 @@ public class CharacterRPG {
         }
     }
 
-    public void levelUp(CharacterRPG namePlayer) {
-            if (namePlayer.getTypeCharacter().equals("warrior")) {
-                namePlayer.setLevel(namePlayer.getLevel() + 1);
-                namePlayer.setStrength(namePlayer.getStrength() + 3);
-                namePlayer.setDexterity(namePlayer.getDexterity() + 2);
-                namePlayer.setIntelligence(namePlayer.getIntelligence() + 1);
-                System.out.println("\n" + namePlayer);
-                System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
-
-            } else if (namePlayer.getTypeCharacter().equals("ranger")) {
-                namePlayer.setLevel(namePlayer.getLevel() + 1);
-                namePlayer.setStrength(namePlayer.getStrength() + 1);
-                namePlayer.setDexterity(namePlayer.getDexterity() + 5);
-                namePlayer.setIntelligence(namePlayer.getIntelligence() + 1);
-                System.out.println("\n" + namePlayer);
-                System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
-
-            } else if (namePlayer.getTypeCharacter().equals("mage") ) {
-                namePlayer.setLevel(namePlayer.getLevel() + 1);
-                namePlayer.setStrength(namePlayer.getStrength() + 1);
-                namePlayer.setDexterity(namePlayer.getDexterity() + 1);
-                namePlayer.setIntelligence(namePlayer.getIntelligence() + 5);
-                System.out.println("\n" + namePlayer);
-                System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
-
-            } else{
-                namePlayer.setLevel(namePlayer.getLevel() + 1);
-                namePlayer.setStrength(namePlayer.getStrength() + 1);
-                namePlayer.setDexterity(namePlayer.getDexterity() + 4);
-                namePlayer.setIntelligence(namePlayer.getIntelligence() + 1);
-                System.out.println("\n" + namePlayer);
-                System.out.println("\nYou're now level " + namePlayer.getLevel() + "!! Congratulations you have leveled up!!");
-            }
-    }
-
-
-
 //    Getters & Setters
-
-
     public String getUsername() {
         return username;
     }

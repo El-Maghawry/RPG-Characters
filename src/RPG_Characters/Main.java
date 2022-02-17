@@ -1,15 +1,10 @@
 package RPG_Characters;
-
 import RPG_Characters.characters.CharacterRPG;
-
 import java.util.Scanner;
-
 import static RPG_Characters.menu.MainMenu.mainMenu;
-
 
 public class Main {
     public static CharacterRPG player;
-
 
     public static void main(String[] args) {
         // Welcome Screen

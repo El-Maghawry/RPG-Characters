@@ -2,7 +2,8 @@ package RPG_Characters.menu;
 
 import java.util.Scanner;
 
-import static RPG_Characters.Main.*;
+import static RPG_Characters.Main.player;
+import static RPG_Characters.characters.LevelUp.levelUp;
 import static RPG_Characters.menu.MenuEquipment.equipmentMenu;
 import static RPG_Characters.menu.Utility.goBacktoPrevious;
 
@@ -43,7 +44,7 @@ public class MainMenu {
                 }
                 case 3 -> {
                     System.out.println(spaceBetweenMenus + "\nLeveling up ⚡️");
-                    player.levelUp(player);
+                    levelUp(player);
                     goBacktoPrevious();
                 }
                 case 4 -> {
